@@ -15,6 +15,7 @@ class Test_001_Login:
     def test_homePageTitle(self,setUp):
 
         self.logger.info("****** Test_001_Login ******")
+        self.logger.info("****** verifying Home Page Title ******")
         self.driver = setUp
         self.driver.get(self.baseURL)
         act_title = self.driver.title
@@ -22,12 +23,16 @@ class Test_001_Login:
         if act_title == "Your store. Login":
             self.driver.close()
             assert True
+            self.logger.info("****** Home page title test is passed ******")
         else:
             self.driver.save_screenshot(".\\Screenshots\\"+"test_homePageTitle.png")
             self.driver.close()
+            self.logger.info("****** Home page title test is failed ******")
             assert False
+            
     
     def test_login(self,setUp):
+            self.logger.info("****** Verifying the Login Test ******")
             self.driver = setUp
             self.driver.get(self.baseURL)
             # Creating an object of loginpage to access class method
@@ -41,8 +46,10 @@ class Test_001_Login:
             # Assertion for the Title
             if act_title == "Dashboard / nopCommerce administration":
                  self.driver.close()
+                 self.logger.info("****** Login Test passed ******")
                  assert True
             else:
                  self.driver.save_screenshot(".\\Screenshots\\"+"test_login.png")
                  self.driver.close()
+                 self.logger.info("****** Login Test Failed ******")
                  assert False
