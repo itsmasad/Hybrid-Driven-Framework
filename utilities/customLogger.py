@@ -3,9 +3,9 @@ import logging  # Importing the logging module
 class LogGen:
     @staticmethod
     def loggen():
-    
-        # Static method to generate a logger instance.
-       
+        """
+        Static method to generate a logger instance.
+        """
         # Configuring the logging system
         logging.basicConfig(
             filename=".\\logs\\automation.log",  # Specifying the path for the log file
