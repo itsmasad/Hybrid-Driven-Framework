@@ -13,8 +13,11 @@ class Test_001_Login:
         act_title = self.driver.title
         self.driver.close()
         if act_title == "Your store. Login":
+            self.driver.close()
             assert True
         else:
+            self.driver.save_screenshot(".\\Screenshots\\"+"test_homePageTitle.png")
+            self.driver.close()
             assert False
     
     def test_login(self,setUp):
