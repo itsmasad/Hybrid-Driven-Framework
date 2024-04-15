@@ -2,13 +2,19 @@ import pytest
 from selenium import webdriver
 from pageObjects.LoginPage import LoginPage
 from utilities.readProperties import ReadConfig
+from utilities.customLogger import LogGen
 
 class Test_001_Login:
     baseURL = ReadConfig.getApplicationURL()
     username = ReadConfig.getUseremail()
     password = ReadConfig.getUserpassword()
 
+    # importing loggen method from the logGen class in utilities
+    logger = LogGen.loggen()
+
     def test_homePageTitle(self,setUp):
+
+        self.logger.info("****** Test_001_Login ******")
         self.driver = setUp
         self.driver.get(self.baseURL)
         act_title = self.driver.title
