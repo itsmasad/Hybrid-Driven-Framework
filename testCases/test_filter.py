@@ -8,10 +8,10 @@ from utilities.readProperties import ReadConfig
 
 
 class TestCase_002_Products:
-    baseURL = ReadConfig.getApplicationURL
-    productName = ReadConfig.getProductFilterData
-    userName = ReadConfig.getUseremail
-    password = ReadConfig.getUserpassword
+    baseURL = ReadConfig.getApplicationURL()
+    productName = ReadConfig.getProductFilterData()
+    userName = ReadConfig.getUseremail()
+    password = ReadConfig.getUserpassword()
 
     def test_Product_filter(self,setUp):
 
@@ -28,5 +28,4 @@ class TestCase_002_Products:
         self.Manu.Click_manue_products()
         self.Manu.setProductName(self.productName)
         self.Manu.Click_searchButton()
-        time.sleep(3)
         self.driver.close()
