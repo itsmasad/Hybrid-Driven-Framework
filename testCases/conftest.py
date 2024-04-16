@@ -5,9 +5,13 @@ from selenium import webdriver
 def setUp(browser):
     if browser=='chrome':
         driver = webdriver.Chrome()
+        print("Launching Chrome Browser.......")
+        # pytest -v -s *filename* --browser chrome
     elif browser =='firefox':
         driver = webdriver.Firefox()
-        
+        print("Launching Firefox Browser.......")
+        # pytest -v -s *filename* --browser firefox
+
     return driver
 
 def pytest_addoption(parser): #This will get the value from CLI /hooks
