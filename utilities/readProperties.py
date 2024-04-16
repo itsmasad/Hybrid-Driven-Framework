@@ -20,3 +20,8 @@ class ReadConfig():
     def getUserpassword():
         password = config.get('common info','password')
         return password
+    
+    @staticmethod
+    def getProductFilterData():
+        productName = config.get('product filter','productName')
+        return productName
