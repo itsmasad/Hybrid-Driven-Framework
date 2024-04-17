@@ -44,7 +44,9 @@ class Manu:
 
     def Click_addNewProduct(self):
         self.uti = reusableFunction(self.driver)
-        self.uti.wait(By.XPATH,self.button_addNewProduct_xpath).click()
+        time.sleep(3)
+        self.uti.wait(By.XPATH,self.button_addNewProduct_xpath)
+        self.driver.find_element(By.XPATH,self.button_addNewProduct_xpath).click()
         
     def set_newProductName(self):
         self.uti = reusableFunction(self.driver)
