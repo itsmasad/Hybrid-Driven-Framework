@@ -41,5 +41,8 @@ class TestCase_002_Products:
 
         self.Manu = Manu(self.driver)
         self.Manu.Click_addNewProduct()
-        self.Manu.
+        self.Manu.set_newProductName()
+        self.Manu.set_shortDescription()
+        self.Manu.Click_Save_Button()
+
 
