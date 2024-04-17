@@ -37,9 +37,11 @@ class TestCase_002_Products:
         self.lp = LoginPage(self.driver)
         self.lp.setUserName(self.userName)
         self.lp.setPassword(self.password)
-        self.lp.ClickLogin
+        self.lp.ClickLogin()
 
         self.Manu = Manu(self.driver)
+        self.Manu.Click_manue_catalog()
+        self.Manu.Click_manue_products()
         self.Manu.Click_addNewProduct()
         self.Manu.set_newProductName()
         self.Manu.set_shortDescription()

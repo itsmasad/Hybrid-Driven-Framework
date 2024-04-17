@@ -29,6 +29,7 @@ class Manu:
     
     def Click_manue_products(self):
         self.uti = reusableFunction(self.driver)
+        time.sleep(2)
         self.uti.wait(By.XPATH,self.tab_products_xpath)
         self.driver.find_element(By.XPATH,self.tab_products_xpath).click()
     
@@ -44,7 +45,6 @@ class Manu:
 
     def Click_addNewProduct(self):
         self.uti = reusableFunction(self.driver)
-        time.sleep(3)
         self.uti.wait(By.XPATH,self.button_addNewProduct_xpath)
         self.driver.find_element(By.XPATH,self.button_addNewProduct_xpath).click()
         
@@ -60,4 +60,6 @@ class Manu:
 
     def Click_Save_Button(self):
         self.uti = reusableFunction(self.driver)
-        self.uti.wait(By.ID,self.button_save_id).click()
+        time.sleep(3)
+        # self.uti.wait(By.ID,self.button_save_id)
+        self.driver.find_element(By.ID,self.button_save_id).click()
