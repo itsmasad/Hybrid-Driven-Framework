@@ -29,3 +29,17 @@ class TestCase_002_Products:
         self.Manu.setProductName(self.productName)
         self.Manu.Click_searchButton()
         self.driver.close()
+    
+    def addNewProduct(self,setUp):
+        self.driver = setUp
+        self.driver.get(self.baseURL)
+
+        self.lp = LoginPage(self.driver)
+        self.lp.setUserName(self.userName)
+        self.lp.setPassword(self.password)
+        self.lp.ClickLogin
+
+        self.Manu = Manu(self.driver)
+        self.Manu.Click_addNewProduct()
+        self.Manu.
+
