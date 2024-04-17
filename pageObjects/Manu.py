@@ -1,7 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from utilities.wait import reusableFunction
-
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 class Manu:
     tab_Catalog_xpath = "//p[normalize-space()='Catalog']"
@@ -13,18 +14,21 @@ class Manu:
         self.driver = driver
 
     def Click_manue_catalog(self):
+        # Issue was here
+        
         self.uti = reusableFunction(self.driver)
-        self.uti.wait(self.driver,By.XPATH,self.tab_Catalog_xpath)
+        self.uti.wait(By.XPATH, self.tab_Catalog_xpath)
+
         self.driver.find_element(By.XPATH,self.tab_Catalog_xpath).click()
     
     def Click_manue_products(self):
         self.uti = reusableFunction(self.driver)
-        self.uti.wait(self.driver,By.XPATH,self.tab_products_xpath)
+        self.uti.wait(By.XPATH,self.tab_products_xpath)
         self.driver.find_element(By.XPATH,self.tab_products_xpath).click()
     
     def setProductName(self,productName):
         self.uti = reusableFunction(self.driver)
-        self.uti.wait(self.driver,By.ID,self.textbox_productName_id)
+        self.uti.wait(By.ID,self.textbox_productName_id)
         self.driver.find_element(By.ID,self.textbox_productName_id).clear()
         self.driver.find_element(By.ID,self.textbox_productName_id).send_keys(productName)
     
