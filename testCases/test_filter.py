@@ -13,22 +13,22 @@ class TestCase_002_Products:
     userName = ReadConfig.getUseremail()
     password = ReadConfig.getUserpassword()
 
-    # def test_Product_filter(self,setUp):
+    def test_Product_filter(self,setUp):
 
-    #     self.driver = setUp
-    #     self.driver.get(self.baseURL)
-    #     self.Manu = Manu(self.driver)
-    #     self.lp = LoginPage(self.driver)
+        self.driver = setUp
+        self.driver.get(self.baseURL)
+        self.Manu = Manu(self.driver)
+        self.lp = LoginPage(self.driver)
 
-    #     self.lp.setUserName(self.userName)
-    #     self.lp.setPassword(self.password)
-    #     self.lp.ClickLogin()
+        self.lp.setUserName(self.userName)
+        self.lp.setPassword(self.password)
+        self.lp.ClickLogin()
 
-    #     self.Manu.Click_manue_catalog()
-    #     self.Manu.Click_manue_products()
-    #     self.Manu.setProductName(self.productName)
-    #     self.Manu.Click_searchButton()
-    #     self.driver.close()
+        self.Manu.Click_manue_catalog()
+        self.Manu.Click_manue_products()
+        self.Manu.setProductName(self.productName)
+        self.Manu.Click_searchButton()
+        self.driver.close()
     
     def test_addNewProduct(self,setUp):
         self.driver = setUp
@@ -45,6 +45,7 @@ class TestCase_002_Products:
         self.Manu.Click_addNewProduct()
         self.Manu.set_newProductName()
         self.Manu.set_shortDescription()
-        self.Manu.Click_Save_Button()
+        # self.Manu.Click_Save_Button()
+        self.driver.close()
 
 
