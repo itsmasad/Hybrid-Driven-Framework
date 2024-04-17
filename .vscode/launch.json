@@ -8,7 +8,8 @@
             "name": "Pytest",
             "type": "debugpy",
             "request": "launch",
-            "module": "pytest"
+            "module": "pytest",
+            "justMyCode": true
         },
         {
             "name": "Python Debugger: Current File",
