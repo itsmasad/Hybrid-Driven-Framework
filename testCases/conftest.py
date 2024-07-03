@@ -17,6 +17,7 @@ def setUp(browser):
 def pytest_addoption(parser): #This will get the value from CLI /hooks
     parser.addoption("--browser")
 
+
 @pytest.fixture()
 def browser(request): # This will return the browser value to the setup method
     return request.config.getoption("--browser")
