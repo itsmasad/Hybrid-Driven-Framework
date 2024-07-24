@@ -28,3 +28,4 @@ class ReadConfig():
     def getProductFilterData():
         productName = config.get('product filter','productName')
         return productName
+        
