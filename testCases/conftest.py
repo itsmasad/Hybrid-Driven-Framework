@@ -32,6 +32,7 @@ def browser(request): # This will return the browser value to the setup method
 
 ## It is hook for delete/modify environment info to HTML Report
 
+
 @pytest.mark.optionalhook
 def pytest_metadata(metadata):
     metadata.pop("JAVA_HOME", None)
